@@ -9,6 +9,7 @@ def __main__():
 		print("[{0}/{1}] {2}".format(str(i).zfill(3), str(amount).zfill(3), name + " " * 16), end="\r")
 		getJSON(url, name)
 		i = i + 1
+	print("[{0}/{0}] Finished downloading teampage data".format(str(amount).zfill(3)))
 
 def getPage(url):
 	result = urllib.request.urlopen(url).read()
